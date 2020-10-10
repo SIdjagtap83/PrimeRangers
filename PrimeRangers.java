@@ -5,16 +5,16 @@ class PrimeRangers
 
      public static void main(String args[])
        {
-                int no_2,no_3,no_5,no_7,count,temp=0;
+                int no_2,no_3,no_5,no_7,count,temp;
                 
                 Scanner sc = new Scanner(System.in);
-/*                int n=sc.nextInt();
+                int n=sc.nextInt();
                 sc.nextLine();
-
                 for(int i=0;i<n;i++)
                 {
-*/                     int fn = sc.nextInt();
+                     int fn = sc.nextInt();
                      int ln = sc.nextInt();
+                     sc.nextLine();
                      count=0;
                      
                      
@@ -50,11 +50,12 @@ class PrimeRangers
                            }
                          else
                            {
+                               int T = F;
 
-                             while(F>0)
+                             while(T>0)
                              {
-                              temp = F%10;
-                              F = F/10;
+                              temp = T%10;
+                              T = T/10;
                                  if(temp==2)
                                     {
                                      no_2+=1;
@@ -73,7 +74,7 @@ class PrimeRangers
                                     }   
                                  else{}
                               
-                              
+                                 
 
                               }
 
@@ -82,18 +83,19 @@ class PrimeRangers
                              
                             if(no_2>=no_3&&no_3>=no_5&&no_5>=no_7)
                                {
-                                  System.out.println(F);
+                                  count+=1;
                                }     
                              
 
                      }
 
-                             
+                            System.out.println(count); 
                      
                      
-//                }
+                }
                 
 
+                sc.close();
        }
 
 }
